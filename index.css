@@ -1,0 +1,294 @@
+html {
+    background-image: 
+        url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/71c382ff-ba87-45f5-bc5f-272d0b65f1fa/d7aopi7-df760885-8389-49a9-872d-425fee355b4f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83MWMzODJmZi1iYTg3LTQ1ZjUtYmM1Zi0yNzJkMGI2NWYxZmEvZDdhb3BpNy1kZjc2MDg4NS04Mzg5LTQ5YTktODcyZC00MjVmZWUzNTViNGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Sp6d3h_lUqR5qZBlYSJukhpgoebk3S-ncPW9P8ifVZ4');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+:root {
+  --accent-hover:#f59f59;
+}
+a:hover {
+    color: var(--accent-hover);
+}
+#realhomesum:hover #homesum {
+    color: var(--accent-hover);
+}
+#homesum {
+    transition: color 0.3s ease;
+}
+summary:hover {
+    color: var(--accent-hover);
+}
+details:hover {
+    color: var(--accent-hover);
+}
+@font-face {
+    font-family: 'Bugaki';
+    src: url('fonts/Bugaki.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#homelink {
+    padding-left: 12px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+.torn-image-container {
+    margin: 20px auto;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+}
+.shadow-wrapper {
+    filter: drop-shadow(4px 4px 20px rgba(0,0,0,0.15));
+}
+.torn-image {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 92%, 
+        97% 88%, 92% 95%, 85% 90%, 78% 94%, 
+        70% 87%, 62% 93%, 55% 89%, 48% 96%, 
+        40% 91%, 32% 94%, 25% 88%, 18% 92%, 
+        10% 89%, 5% 94%, 0% 91%
+    );
+}
+#i800x400 {
+    padding: 50px 0 0 30px;
+}
+.torn-image-container:hover {
+    transform: rotate(0.5deg) scale(1.02);
+    transition: transform 0.3s ease;
+}
+#header {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./worms.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(51, 51, 51, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2000;
+    background: linear-gradient(180deg, #444444 0%, #333333 100%);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-weight: 500; 
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+}
+.feedbackimg {
+    align-self: center;
+    padding: 75px;
+}
+.title-main {
+    font-size: 5rem;
+    margin: 0;
+    color: white;
+    padding-bottom: 20px;
+}
+.title-p2 {
+    font-size: 5rem;
+    margin: 0;
+    color: white;
+}
+.title-sub {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+#pages-summary {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 8px;
+    padding-right: 12px;
+    z-index: 1000;
+}
+#pages-content {
+    background-color: #333333;
+    padding: 15px 30px 15px 20px; 
+    display: block; 
+}
+#homesum {
+    text-decoration: none;
+    color: white;
+}
+#realhomesum {
+    &::marker {
+        content: none;
+        display: none;
+        list-style: none;
+    }
+    &::-webkit-details-marker {
+        content: none;
+        display: none;
+        list-style: none;
+    }
+    position: relative;
+    padding-right: 30px;
+    cursor: grab;
+    text-align: right;
+    font-size: 20px;
+}
+.inner-pages {
+    font-size: 16px;
+    padding: 9px 5px 9px 5px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+#realhomesum::after {
+    content: '▶';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+#pages-summary[open] #realhomesum::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+#page-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    flex-direction: column;
+}
+#page-content2 {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    align-items: flex-start;
+}
+#page-content3 {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    flex-direction: column;
+}
+#page-content4 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.text-column {
+    padding-top: 50px;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.body {
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    text-align-last: center;
+}
+#doc {
+    align-self: center;
+    min-width: 40vw;
+    min-height: 50vh;
+}
+#products {
+    align-self: left;
+    text-align: left;
+    font-size: 25px;
+    color: white;
+    left: 0;
+    top: 0;
+    display: inline;
+    padding: 15px;
+}
+#warning {
+    color: #ffb476;
+    border: 1px dashed #ffb476;
+    padding: 10px;
+    font-size: 29px;
+    max-width: 250px;
+    text-align: center;
+}
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+#bottom-images {
+    padding: 20px;
+    align-self: center;
+}
+ul ol {
+    padding-left: 40px;
+}
+ul ul {
+    padding-left: 40px;
+}
+ol ol {
+    padding-left: 40px;
+}
+ol ul {
+    padding-left: 40px;
+}
+.product-photo {
+    padding: 20px;
+}
+.top-row2 {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.fruit-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.demo-fruits {
+    width: 23%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
